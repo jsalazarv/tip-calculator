@@ -1,7 +1,7 @@
 name: CI Tip Calculator
 on:
-  push:
-    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop, feature/*]
 jobs:
   test:
     name: Run Unit Test
