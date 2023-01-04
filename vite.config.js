@@ -7,6 +7,6 @@ export default defineConfig(() => {
 
   return {
     plugins: [react()],
-    base: path ? path : '/',
+    base: path || '/',
   };
 });
