@@ -5,5 +5,5 @@
   @apply items-center;
   @apply text-2xl;
   @apply font-bold;
-  color: #00474B;
+  @apply text-primary-dark;
 }
