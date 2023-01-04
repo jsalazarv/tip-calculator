@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>React Boilerplate</h1>
+      <h1>Tip Calculator</h1>
     </div>
   );
 }
