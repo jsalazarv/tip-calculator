@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react';
-import { useBillCalculator } from './useBillCalculator.js';
+import { useBillCalculator } from './index.js';
 
 describe('[ Hook - useBillCalculator ]', () => {
   test('Should return initial state', () => {
