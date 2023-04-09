@@ -1,31 +1,31 @@
 import { useEffect, useState } from 'react';
 
-export const useBillCalculator = ({
-  selectedBill = 0,
-  selectedTipPercentage = 0,
-  selectedQuantityPeople = 1,
-} = {}) => {
-  const [bill, setBill] = useState(selectedBill);
+export const useBillCalculator = () => {
+  const [bill, setBill] = useState(0);
   const [tipAmount, setTipAmount] = useState(0);
-  const [total, setTotal] = useState(0);
+  const [numberOfPeople, setNumberOfPeople] = useState(1);
   const [tipAmountPerPerson, setTipAmountPerPerson] = useState(0);
   const [totalPerPerson, setTotalPerPerson] = useState(0);
 
   const calculateBill = () => {
-    let tipAmount = (bill * selectedTipPercentage) / 100;
-    let total = bill + tipAmount;
-    let tipAmountPerPerson = tipAmount / selectedQuantityPeople;
-    let totalPerPerson = total / selectedQuantityPeople;
+    const tipAmountPerPersonCalculated =
+      (bill * tipAmount) / 100 / numberOfPeople;
+    const totalPerPersonCalculated =
+      bill / numberOfPeople + tipAmountPerPersonCalculated;
 
-    setTipAmount(tipAmount);
-    setTotal(total);
-    setTipAmountPerPerson(tipAmountPerPerson);
-    setTotalPerPerson(totalPerPerson);
+    setTipAmountPerPerson(tipAmountPerPersonCalculated);
+    setTotalPerPerson(totalPerPersonCalculated);
   };
 
   useEffect(() => {
     calculateBill();
-  }, []);
+  }, [bill, tipAmount, numberOfPeople]);
 
-  return { bill, tipAmount, total, tipAmountPerPerson, totalPerPerson };
+  return {
+    setBill,
+    setTipAmount,
+    setNumberOfPeople,
+    tipAmountPerPerson,
+    totalPerPerson,
+  };
 };
