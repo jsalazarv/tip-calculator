@@ -22,10 +22,15 @@ export const useBillCalculator = () => {
   }, [bill, tipAmount, numberOfPeople]);
 
   return {
+    bill,
     setBill,
+    tipAmount,
     setTipAmount,
+    numberOfPeople,
     setNumberOfPeople,
     tipAmountPerPerson,
+    setTipAmountPerPerson,
     totalPerPerson,
+    setTotalPerPerson,
   };
 };
