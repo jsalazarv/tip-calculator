@@ -1,0 +1,38 @@
+.tip-calculator-display {
+    @apply w-full md:w-1/2;
+    @apply bg-primary-500;
+    @apply text-white;
+    @apply rounded-2xl;
+    @apply p-10;
+}
+
+.display-data-container {
+    @apply flex;
+    @apply justify-between;
+    @apply items-center;
+}
+
+.display-titles {
+    @apply text-base;
+    @apply leading-6;
+    @apply font-bold;
+}
+
+.display-subtitles {
+    @apply text-xs;
+    @apply leading-6;
+    @apply font-bold;
+    @apply text-primary-600;
+}
+
+.display-quantities {
+    @apply text-5xl;
+    @apply leading-6;
+    @apply font-bold;
+    @apply text-primary-400;
+}
+
+.disabled {
+    @apply opacity-25;
+    @apply pointer-events-none;
+}

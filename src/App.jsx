@@ -1,9 +1,10 @@
 import './App.css';
+import { BillCalculator } from './components/BillCalculator/index.jsx';
 
 function App() {
   return (
     <div className="App">
-      <h1>Tip Calculator</h1>
+      <BillCalculator />
     </div>
   );
 }

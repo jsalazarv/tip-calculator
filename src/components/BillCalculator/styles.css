@@ -1,0 +1,67 @@
+.tip-calculator-card {
+    @apply bg-white;
+    @apply p-8;
+    @apply rounded-[25px];
+    @apply max-w-[920px];
+    @apply w-auto md:w-[920px];
+    @apply h-auto md:max-h-[481px];
+    @apply h-auto md:h-[481px];
+    @apply flex;
+    @apply flex-col md:flex-row;
+    @apply gap-8;
+    box-shadow: 0 32px 43px rgba(79, 166, 175, 0.200735);
+}
+
+.tip-calculator-card-controls {
+    @apply w-full md:w-1/2;
+}
+
+.input-of-calculator {
+    @apply bg-primary-100;
+    @apply rounded-md;
+    @apply h-12;
+    @apply w-full;
+    @apply py-1.5;
+    @apply py-1.5;
+    @apply px-4;
+    @apply text-primary-500;
+    @apply text-2xl;
+    @apply focus:outline-primary-400;
+    @apply transition-colors duration-500;
+}
+
+.card-labels {
+    @apply text-primary-600;
+    @apply text-base;
+    @apply font-bold;
+}
+
+.btn {
+    @apply px-3.5;
+    @apply py-1.5;
+    @apply rounded-md;
+    @apply h-12;
+    @apply transition-colors duration-500;
+}
+
+.btn-dark {
+    @apply bg-primary-500;
+    @apply text-white;
+    @apply hover:bg-primary-300 hover:text-primary-500;
+}
+
+.btn-default {
+    @apply bg-primary-400;
+    @apply text-primary-500;
+    @apply hover:bg-primary-300 hover:text-primary-500;
+}
+
+.active {
+    @apply bg-primary-400;
+}
+
+.controls-group {
+    @apply grid;
+    @apply grid-cols-2 md:grid-cols-3;
+    @apply gap-4;
+}

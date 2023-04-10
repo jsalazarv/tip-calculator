@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 :root {
-  @apply bg-primary-lightness;
+  @apply bg-primary-200;
 }
